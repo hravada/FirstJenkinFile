@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('check out') {
             steps {
-                sh 'Hi'
+                git credentialsId: '8bbdc524-aca4-4a58-ab49-4cbcce3015df', url: 'https://github.com/hravada/FirstJenkinFile.git'
             }
         }
     }
